@@ -8,6 +8,8 @@ const cookieSession = require("cookie-session");
 const app = express();
 const bodyParser = require("body-parser");
 
+const PORT = process.env.PORT || 3000;
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(expressLayouts);
@@ -25,4 +27,4 @@ app.use("/", RoutermainApp);
 app.use("/reg", regRouter);
 app.use("/log", logRouter);
 
-app.listen(3000);
+app.listen(PORT);
