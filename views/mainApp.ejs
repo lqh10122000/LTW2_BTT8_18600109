@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>admin</title>
+  </head>
+
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 150px;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+
+  <body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/admin">Admin</a>
+          <a class="nav-item nav-link" href="/admin/config">Config</a>
+          <a class="nav-item nav-link disabled" href="/">Profile</a>
+        </div>
+      </div>
+    </nav> -->
+
+    <h3 style="text-align: center; margin-top: 100px">
+      Thông Tin Mới Nhất Về Covid-19
+    </h3>
+
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Link</th>
+      </tr>
+
+      <% for(let i = 0; i < covids.length; i++) { %>
+
+      <tr>
+        <td><%= covids[i].title %></td>
+        <td><%= covids[i].link %></td>
+      </tr>
+
+      <% } %>
+
+      <!--     
+    <tr>
+        <td>test02</td>
+        <td>test02@gmail.com</td>
+        <td>true</td>
+      </tr> <tr>
+        <td>test03</td>
+        <td>test03@gmail.com</td>
+        <td>true</td>
+      </tr> <tr>
+        <td>test04</td>
+        <td>test04@gmail.com</td>
+        <td>true</td>
+      </tr> -->
+    </table>
+  </body>
+</html>
