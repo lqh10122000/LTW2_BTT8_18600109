@@ -1,1 +1,1 @@
-web: Nodemon app.js
+web: Node app.js
