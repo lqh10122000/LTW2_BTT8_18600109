@@ -36,7 +36,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <% if(currentUser) { %>
+        <% if(currentUser) { if(fullName) { %>
+        <a class="nav-item nav-link" href="./auth/logout"><%= fullName %></a>
+        <% } %>
 
         <a class="nav-item nav-link" href="./auth/logout">Đăng Xuất</a>
 

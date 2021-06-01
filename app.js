@@ -2,6 +2,8 @@ const express = require("express");
 const RoutermainApp = require("./routers/mainApp");
 const regRouter = require("./routers/register");
 const logRouter = require("./routers/login");
+const authRouter = require("./routers/login");
+
 const expressLayouts = require("express-ejs-layouts");
 const cookieSession = require("cookie-session");
 
@@ -24,6 +26,7 @@ app.set("view engine", "ejs");
 app.use("/", RoutermainApp);
 app.use("/reg", regRouter);
 app.use("/log", logRouter);
+app.use("/auth", authRouter);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
