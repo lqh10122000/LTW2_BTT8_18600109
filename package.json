@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "Node app.js"
+    "start": "Nodemon app.js"
   },
   "author": "Quang Huy",
   "license": "ISC",
